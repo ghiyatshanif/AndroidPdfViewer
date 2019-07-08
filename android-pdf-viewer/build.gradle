@@ -31,14 +31,14 @@ android {
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
-        versionName "4.2.0"
+        versionName "4.3.0"
     }
 
 }
 
 dependencies {
     implementation 'com.android.support:support-compat:26.1.0'
-    api 'com.github.Lucasq95:PdfiumAndroid:103d5855f7'
+    api 'com.github.Lucasq95:PdfiumAndroid:pdfium-android-3.0.0'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
