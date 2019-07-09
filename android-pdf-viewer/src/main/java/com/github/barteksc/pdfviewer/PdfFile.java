@@ -19,6 +19,7 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.SparseBooleanArray;
+import android.graphics.PointF;
 
 import com.github.barteksc.pdfviewer.exception.PageRenderingException;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
@@ -315,7 +316,7 @@ class PdfFile {
         return pdfiumCore.mapRectToDevice(pdfDocument, docPage, startX, startY, sizeX, sizeY, 0, rect);
     }
 
-    public PointF mapDeviceCoordsToPage(int pageIndex, int pageIndex, int startX, int startY, int sizeX,
+    public PointF mapDeviceCoordsToPage(int pageIndex, int startX, int startY, int sizeX,
                                            int sizeY, int rotate, int deviceX, int deviceY) {
       int docPage = documentPage(pageIndex);
       return pdfiumCore.mapDeviceCoordsToPage(pdfDocument, docPage, startX, startY, sizeX, sizeY, rotate, deviceX, deviceY);
