@@ -277,6 +277,11 @@ public class PDFView extends RelativeLayout {
         decodingAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
+    public PointF mapDeviceCoordsToPage(int pageIndex, int startX, int startY, int sizeX,
+                                           int sizeY, int rotate, int deviceX, int deviceY) {
+      return pdfFile.mapDeviceCoordsToPage(pageIndex, startX, startY, sizeX, sizeY, rotate, deviceX, deviceY);
+    }
+
     /**
      * Go to the given page.
      *
