@@ -922,7 +922,7 @@ public class PDFView extends RelativeLayout {
     /**
      * Find the edge to snap to when showing the specified page
      */
-    SnapEdge findSnapEdge(int page) {
+    public SnapEdge findSnapEdge(int page) {
         if (!pageSnap || page < 0) {
             return SnapEdge.NONE;
         }
@@ -945,7 +945,7 @@ public class PDFView extends RelativeLayout {
     /**
      * Get the offset to move to in order to snap to the page
      */
-    float snapOffsetForPage(int pageIndex, SnapEdge edge) {
+    public float snapOffsetForPage(int pageIndex, SnapEdge edge) {
         float offset = pdfFile.getPageOffset(pageIndex, zoom);
 
         float length = swipeVertical ? getHeight() : getWidth();
