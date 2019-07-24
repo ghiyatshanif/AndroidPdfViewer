@@ -279,7 +279,10 @@ public class PDFView extends RelativeLayout {
 
     public PointF mapDeviceCoordsToPage(int pageIndex, int startX, int startY, int sizeX,
                                            int sizeY, int rotate, int deviceX, int deviceY) {
-      return pdfFile.mapDeviceCoordsToPage(pageIndex, startX, startY, sizeX, sizeY, rotate, deviceX, deviceY);
+
+      int startYWithSpacing = startY + pdfFile.getPageSpacing(pageIndex, 1);
+      Log.d("offset pixel", String.valueOf(startYWithSpacing);
+      return pdfFile.mapDeviceCoordsToPage(pageIndex, startX, startYWithSpacing, sizeX, sizeY, rotate, deviceX, deviceY);
     }
 
     /**
