@@ -670,8 +670,10 @@ public class PDFView extends RelativeLayout {
         Rect srcRect = new Rect(0, 0, renderedBitmap.getWidth(),
                 renderedBitmap.getHeight());
 
-        float offsetX = toCurrentScale(pageRelativeBounds.left * size.getWidth());
-        float offsetY = toCurrentScale(pageRelativeBounds.top * size.getHeight());
+        // float offsetX = toCurrentScale(pageRelativeBounds.left * size.getWidth());
+        float offsetX = 0;
+        // float offsetY = toCurrentScale(pageRelativeBounds.top * size.getHeight());
+        float offsetY = 0;
         float width = toCurrentScale(pageRelativeBounds.width() * size.getWidth());
         float height = toCurrentScale(pageRelativeBounds.height() * size.getHeight());
 
