@@ -281,7 +281,7 @@ public class PDFView extends RelativeLayout {
                                            int sizeY, int rotate, int deviceX, int deviceY) {
 
       int startYWithSpacing = startY + pdfFile.getPageSpacing(pageIndex, 1);
-      Log.d("offset pixel", String.valueOf(startYWithSpacing);
+      Log.d("offset pixel", String.valueOf(startYWithSpacing));
       return pdfFile.mapDeviceCoordsToPage(pageIndex, startX, startYWithSpacing, sizeX, sizeY, rotate, deviceX, deviceY);
     }
 
