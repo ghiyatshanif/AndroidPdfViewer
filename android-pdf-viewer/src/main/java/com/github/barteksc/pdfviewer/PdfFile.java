@@ -316,6 +316,12 @@ class PdfFile {
         return pdfiumCore.mapRectToDevice(pdfDocument, docPage, startX, startY, sizeX, sizeY, 0, rect);
     }
 
+    public PointF mapPageCoordsToDevice(int pageIndex, int startX, int startY, int sizeX, int sizeY, int rotate,
+                                          double pageX, double pageY) {
+      int docPage = documentPage(pageIndex);
+      return pdfiumCore.mapPageCoordsToDevice(pdfDocument, docPage, startX, startY, sizeX, sizeY, rotate, pageX, pageY);
+    }
+
     public PointF mapDeviceCoordsToPage(int pageIndex, int startX, int startY, int sizeX,
                                            int sizeY, int rotate, int deviceX, int deviceY) {
       int docPage = documentPage(pageIndex);
