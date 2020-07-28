@@ -295,6 +295,10 @@ public class PDFView extends RelativeLayout {
       return (int)pdfFile.getPageSpacing(0, 1);
     }
 
+    public float getSecondaryPageOffset(int pageIndex, int zoom) {
+        return pdfFile.getSecondaryPageOffset(pageIndex, zoom);
+    }
+
     /**
      * Go to the given page.
      *
